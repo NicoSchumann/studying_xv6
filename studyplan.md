@@ -1,9 +1,14 @@
 
 ### Motivation
-(German)
-Ich moeche mich mithilfe des Intel Software Development Manual langsam an die x86-64 Architektur herantasten. Mein Ziel ist es, die Software-Architektur so weit zu verstehen, dass ich letztendlich dazu faehig bin, eigenstaendig (mithilfe von Data Cheats) kleine unixoide Kernel zu bauen. Nebenher lese ich dazu noxh das OSTEP-Buch, gehostet auf ostep.org. Ich kenne mch nur relativ spaerlich mit der Intel-Mnmemonik aus. Ich kenne mich dafuer mit Bit-Masking, C und C++ aus. Assembly-Code habe ich bislang nur wenig geschrieben. Ich code meine Sachen unter Linux (Ubuntu) und nutze fuer hardwarek-nahe Programmierung die QEMU-VM
 
-### Teacher (OpenAI-GPT5):
+**My background**:
+I have some little understanding of bit masking, bit manipulations and such basic stuff (gained at my study of (German: "Kommunikationselektroniker, Fachrichtung Informationstechnik). At myself I learned autodidactic some stuff of C++. I wrote some little programs (not greater than around 1000 code lines).
+
+At a side effect I came in contact with parallel programming like threads, process forking and such stuff. Also I came in contact with event-driven programming. All that made me curious looking under the hood. I ask me: "How will all that stuff handled under the hood?"
+
+And that take me to some research to good books and papers understanding the basics.
+
+### Teacher (OpenAI-GPT 5):
 Great - this is a perfect project for learning mode. You already gave excellent context (Linux + QEMU), C/C++, bit masking experience, little asm, reading Intel SDM + OSTEP). I'll build a study plan that teaches by doing, connects SDM theory o  concrete Kernel building tasks, and give small labs you can attempt in QEMU. I won't just hand you finished code - I guide you step by step and ask for resources where useful.
 
 ## Plan outline (progressive, ~ 10-16 small milestones)
@@ -27,7 +32,7 @@ Each milestone - short reading form Intel SDM (OSTEP + a focused lab (QEMU). Aim
 
 4. Interrupts and exceptions
   - **Read**: SDM on IDT, exceptions, interrupt descriptor table, privilege transitions, IST / stack switching.
-  - **Lab**: set up an interrupt descriptor table (IDT), implemaent ISR for divide-by-zero and  a timer interrupt (via PIT or LAPIC), handle interrupts in C.
+  - **Lab**: set up an interrupt descriptor table (IDT), implement ISR for divide-by-zero and  a timer interrupt (via PIT or LAPIC), handle interrupts in C.
   - **Goal**: reach kernel code from CPU and return safely.
 
 5. Context switching & simple scheduler
@@ -67,4 +72,14 @@ Each milestone - short reading form Intel SDM (OSTEP + a focused lab (QEMU). Aim
 
 12. Polish: timers, signals, graceful shutdown debugging tooling.
   - **Lab**: integrate GDB with QEMU(`-s`, `-S`), make reliable kernel boot scripts, ad logging, add crash backtraces.
+
+### How to use me - ChatGPT - optimally while you study
+
+I'm most useful at a lab partner + tutor + code reviewer.  
+Practical rules and best practices:
+
+##### Interaction Style and workflow
+* **One microtask per message**: ask a single focused question or show one single failing snippet (readelf output, gdb registers, small asm, or exact error).
+* **Try twice rule**: attempt, ask for a hint; if still in stuck, ask again - then i give more direct guidance or a scaffold. (This preserves active learning)
+* **Teach back**: after I explain, write a 1-2 summary; Ill correct gaps.
 
