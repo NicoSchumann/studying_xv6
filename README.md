@@ -331,5 +331,3 @@ Tip: <one trick to remember>
 
 ---
 
-*If you want, I can now create a small **`meta.md`** file in the repo canvas containing only the index‑card templates and the 10‑item cheat‑sheet so it's easy to copy by hand. Reply **`meta-file`** to have me add it.*
-

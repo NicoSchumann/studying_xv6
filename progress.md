@@ -11,7 +11,7 @@ Use this file to track short, session‑level progress for the studying\_xv6 pro
 - **Duration:**  ????
 - **Goal:** Setting up the toolchain
 - **Backbone topic:** (e.g., Paging, IDT, ELF loader)
-- **Arch (riscv/x86): xvt**
+- **Arch (riscv/x86):** xv*
 
 ### Actions / commands run
 
